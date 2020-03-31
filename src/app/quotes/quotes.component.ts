@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {  Quotes } from '../quotes';
 
 @Component({
   selector: 'app-quotes',
@@ -6,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./quotes.component.css']
 })
 export class QuotesComponent implements OnInit {
+  quotes:Quotes[]=[
+    // All the quote objects go here
+  ];
 
+  // This objects are used to style the DOM
   myStyles={
     'background-color':'black',
     'color':'white',
