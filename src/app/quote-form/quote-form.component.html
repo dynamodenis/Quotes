@@ -1,10 +1,23 @@
-<div class="container">
+<div class="container-fluid">
+    <h2 [ngStyle]="formHead">Fill In The Quote!</h2>
     <div class="row">
         <div class="col-md-6">
             <form action="">
                 <div class="form-group">
-                    <label for="date">Please Input Date</label>
-                    <input type="date">
+                    <label for="date">Please Input Date:</label>
+                    <input type="date" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="name">Type Your Name:</label>
+                    <input type="text" class="form-control" placeholder="Name...">
+                </div>
+                <div class="form-group">
+                    <label for="author">Quote Author's Name:</label>
+                    <input type="text" class="form-control" placeholder="Author....">
+                </div>
+                <div class="form-group">
+                    <label for="quote">Quote:</label>
+                    <textarea name="quote" cols="30" rows="7" placeholder="Quote..."></textarea>
                 </div>
             </form>
         </div>
