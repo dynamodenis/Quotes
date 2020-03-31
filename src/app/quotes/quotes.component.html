@@ -2,8 +2,16 @@
     <div [ngStyle]='myStyles'>
         <h1>QUOTES KINGDOM</h1>
     </div>
-    <div>
-        <app-quote-form></app-quote-form>
+    <div class="row">
+        <div class="col-md-6">
+            <app-quote-form></app-quote-form>
+        </div>
+        <div class="col-md-6">
+            <div>
+                
+            </div>
+           <app-quotes-details></app-quotes-details> 
+        </div>
     </div>
     <footer [ngStyle]='footer'>
         <p>Developer: Denis Mbugua.</p>
