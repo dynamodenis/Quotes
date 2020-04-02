@@ -9,7 +9,7 @@ import {  Quotes } from '../quotes';
 export class QuotesComponent implements OnInit {
   quotes:Quotes[]=[
     // All the quote objects go here
-    new Quotes(1,new Date(2020,2,10),"Denis Mbugua", "Albert","Live free"),
+    new Quotes(1,new Date(2020,2,4),"Denis Mbugua", "Albert","Live free"),
   ];
 
   // this toogles between description
@@ -18,7 +18,14 @@ export class QuotesComponent implements OnInit {
   }
 
   // THIS DELETES THE QUOTE
-  
+  quoteDelete(complete,i){
+    if(complete){
+      let deleteIt=confirm(`Are you sure you want to delete ${this.quotes[i].quote}`);
+      if(deleteIt){
+        this.quotes.splice(i,1);
+      }
+    }
+  }
   // ADD NEW QUOTE TO THE ARRAY FUNCTION
   addNewQuote(newQuote){
     let quoteLength=this.quotes.length;

@@ -6,9 +6,18 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class CustomDatePipe implements PipeTransform {
 
   transform(value: any): any {
-    let date=new Date();
+    let date:Date=new Date();
+    let updatedDate:any= new Date(date.getFullYear(),date.getMonth(),date.getDate());
+    let dateDiffernce=Math.abs(updatedDate-value);
+    const secondsInDay=86400;
+    let dateDiffernceInSeconds=dateDiffernce*0.001;
+    let dateCount=dateDiffernceInSeconds/secondsInDay;
     
-    return null;
+    if(dateCount>=0.5){
+      return Math.ceil(dateCount)+" "+"days ago.";
+    } else{
+      return "today.";
+    }
   }
 
 }
