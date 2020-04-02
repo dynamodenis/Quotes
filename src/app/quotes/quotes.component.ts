@@ -12,10 +12,13 @@ export class QuotesComponent implements OnInit {
     new Quotes(1,new Date(2020,2,10),"Denis Mbugua", "Albert","Live free"),
   ];
 
+  // this toogles between description
   quoteDetails(index){
     this.quotes[index].showDescription=!this.quotes[index].showDescription;
   }
 
+  // THIS DELETES THE QUOTE
+  
   // ADD NEW QUOTE TO THE ARRAY FUNCTION
   addNewQuote(newQuote){
     let quoteLength=this.quotes.length;

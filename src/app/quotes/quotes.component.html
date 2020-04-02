@@ -13,7 +13,7 @@
                 </div>
                 <div>
                     <button (click)='quoteDetails(i)'>QUOTE DETAILS!</button>
-                    <app-quote-details *ngIf="quote.showDescription" [quote]='quote'></app-quote-details>
+                    <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (delete)="quoteDelete($event,i)"></app-quote-details>
                 </div>
                 <hr>
             </div>
