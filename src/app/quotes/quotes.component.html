@@ -12,7 +12,7 @@
                    <p>{{i+1}} {{quote.quote}}</p>
                 </div>
                 <div>
-                    <button (click)='quoteDetails(i)'>QUOTE DETAILS!</button>
+                    <button class="btn btn-primary" (click)='quoteDetails(i)'>QUOTE DETAILS!</button> <span> <app-like-vote></app-like-vote>  <app-dislike-vote></app-dislike-vote></span>
                     <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (delete)="quoteDelete($event,i)"></app-quote-details>
                 </div>
                 <hr>

@@ -8,7 +8,8 @@ import { QuotesComponent } from './quotes/quotes.component';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { QuoteDetailsComponent } from './quote-details/quote-details.component';
 import { CustomDatePipe } from './custom-date.pipe';
-import { VotesComponent } from './votes/votes.component';
+import { LikeVoteComponent } from './like-vote/like-vote.component';
+import { DislikeVoteComponent } from './dislike-vote/dislike-vote.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { VotesComponent } from './votes/votes.component';
     QuoteFormComponent,
     QuoteDetailsComponent,
     CustomDatePipe,
-    VotesComponent
+    LikeVoteComponent,
+    DislikeVoteComponent,
   ],
   imports: [
     BrowserModule,
