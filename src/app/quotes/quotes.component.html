@@ -4,13 +4,16 @@
     </div>
     <div class="row">
         <div class="col-md-6">
-            <app-quote-form></app-quote-form>
+            <app-quote-form (addQuote)='addNewQuote($event)'></app-quote-form>
         </div>
         <div class="col-md-6">
-            <div>
-                
+            <div  *ngFor='let quote of quotes; let i = index'>
+               {{i}} {{quote.quote}} {{quote.author}} 
             </div>
-           <app-quotes-details></app-quotes-details> 
+            <div>
+                <button>QUOTE DETAILS!</button>
+                <!-- <app-quote-details *ngIf='quotes.showDescription' [quote]='quotes'></app-quote-details> -->
+            </div>
         </div>
     </div>
     <footer [ngStyle]='footer'>

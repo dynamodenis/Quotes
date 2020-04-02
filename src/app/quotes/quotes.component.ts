@@ -9,7 +9,30 @@ import {  Quotes } from '../quotes';
 export class QuotesComponent implements OnInit {
   quotes:Quotes[]=[
     // All the quote objects go here
+    new Quotes(1,new Date(2020,2,10),"Denis Mbugua", "Albert","Live free"),
   ];
+
+  quoteDetails(index){
+    this.quotes[index].showDescription=!this.quotes[index].showDescription;
+  }
+
+  // ADD NEW QUOTE TO THE ARRAY FUNCTION
+  addNewQuote(newQuote){
+    let quoteLength=this.quotes.length;
+    newQuote.id=quoteLength++;
+    newQuote.date= new Date(newQuote.date);
+    this.quotes.push(newQuote);
+    console.log(newQuote);
+
+  // if(newQuote){
+  //   newQuote.author='';
+  //   newQuote.quote='';
+  //   newQuote.name='';
+  // }
+    
+  }
+
+  
 
   // This objects are used to style the DOM
   myStyles={
@@ -27,7 +50,7 @@ export class QuotesComponent implements OnInit {
   }
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(){
   }
 
 }
