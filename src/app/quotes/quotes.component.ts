@@ -17,12 +17,7 @@ export class QuotesComponent implements OnInit {
   }
 
   // ADD NEW QUOTE TO THE ARRAY FUNCTION
-  addNewQuote(newQuote){
-    let quoteLength=this.quotes.length;
-    newQuote.id=quoteLength++;
-    newQuote.date= new Date(newQuote.date);
-    this.quotes.push(newQuote);
-    console.log(newQuote);
+  
 
   // if(newQuote){
   //   newQuote.author='';
