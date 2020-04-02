@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DislikeVoteComponent } from './dislike-vote.component';
+import { QuoteVotesComponent } from './quote-votes.component';
 
-describe('DislikeVoteComponent', () => {
-  let component: DislikeVoteComponent;
-  let fixture: ComponentFixture<DislikeVoteComponent>;
+describe('QuoteVotesComponent', () => {
+  let component: QuoteVotesComponent;
+  let fixture: ComponentFixture<QuoteVotesComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DislikeVoteComponent ]
+      declarations: [ QuoteVotesComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DislikeVoteComponent);
+    fixture = TestBed.createComponent(QuoteVotesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
