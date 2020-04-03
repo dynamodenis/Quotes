@@ -6,8 +6,8 @@
         <div class="col-md-6">
             <app-quote-form (addQuote)='addNewQuote($event)'></app-quote-form>
         </div>
-        <div class="col-md-6">
-            <div *ngFor='let quote of quotes; let i = index'>
+        <div class="col-md-6 card">
+            <div *ngFor='let quote of quotes; let i = index' class="card-body">
                 <div>
                    <p>{{i+1}} {{quote.quote}}</p>
                 </div>
