@@ -1,4 +1,9 @@
 <div>
-    <button (click)=likeVotes()>Upvotes</button>   <span>{{likes}}</span>
-    <button (click)='downVotes()'>Downvotes</button> <span>{{dislikes}}</span>
+    <script src="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+    <ul>
+        <li><i class="fas fa-thumbs-up"></i></li>
+        <li><i class="fas fa-thumbs-down"></i></li>
+    </ul>
+    <button [style.backgroundColor]="liked ? 'blue' : 'default'" [disabled]="isDisabled" (click)=likeVotes()>Upvotes</button>   <span>{{likes}}</span>
+    <button [style.backgroundColor]="disliked ? 'blue' : 'default'" [disabled]="isDisabled" (click)='downVotes()'>Downvotes</button> <span>{{dislikes}}</span>
 </div>
