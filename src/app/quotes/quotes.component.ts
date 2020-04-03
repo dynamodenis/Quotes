@@ -9,22 +9,35 @@ import {  Quotes } from '../quotes';
 export class QuotesComponent implements OnInit {
   quotes:Quotes[]=[
     // All the quote objects go here
-    new Quotes(1,new Date(2020,2,4),"Denis Mbugua", "Albert","Live free",0,0),
+    new Quotes(1,new Date(2020,2,4),"Denis Mbugua", "Maya Angelou","If your always trying to be normal you will never know how amazing you can be.",12,2),
+    new Quotes(1,new Date(2020,2,4),"Denis Mbugua", "Albert Einstein","The true proof of intelligence is not the level of knowledge but imagination.",6,0),
+
   ];
   // This Increaments the upvote on a quote
-  public liked=false;
 upVotes(index){
   this.quotes[index].upVotes++;
-  this.liked=true;
+
 }
   // This Increaments the downvote on a quote
-  public disliked=false;
 downVotes(index){
   this.quotes[index].downVotes++;
-  this.disliked=true;
+}
+ 
+// CLASS BINDING
+liked(index){
+  let myStyles={
+    'background-color':this.quotes[index] ? 'blue' : 'default',
+  }
+  return myStyles;
 }
 
-
+// CLASS BINDING
+disliked(index){
+  let myStyles={
+    'background-color':this.quotes[index] ? 'red' : 'default',
+  }
+  return myStyles;
+}
   // this toogles between description
   quoteDetails(index){
     this.quotes[index].showDescription=!this.quotes[index].showDescription;
@@ -55,9 +68,18 @@ downVotes(index){
     
   }
 
-
+// Class binding
+  public span="space"
+  public margin="span"
 
   // This objects are used to style the DOM
+  bodyHead={
+    'background-color':'black',
+    'text-align':'center',
+    'font-size':'2em',
+    'color':'white'
+
+  }
   myStyles={
     'background-color':'black',
     'color':'white',

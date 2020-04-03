@@ -3,17 +3,21 @@
         <h1>QUOTES KINGDOM</h1>
     </div>
     <div class="row">
-        <div class="col-md-6">
+        <div class='container'>
             <app-quote-form (addQuote)='addNewQuote($event)'></app-quote-form>
         </div>
-        <div class="col-md-6 card">
-            <div *ngFor='let quote of quotes; let i = index'>
-                <div appMostVotes>
-                   <p> {{quote.quote}}</p><br>
-                   <span>Likes: {{quote.upVotes}}</span> <span>Dislikes: {{quote.downVotes}}</span>
+        <hr>
+        <div class="container card">
+            <div>
+                <h2 [ngStyle]='bodyHead'>Quotes</h2>
+            </div>
+            <div *ngFor='let quote of quotes; let i = index' appMostVotes>
+                <div >
+                   <h4>{{i+1}} {{quote.quote}} </h4><br>
+                   <span [class]="span">Likes: {{quote.upVotes}}</span> <span [class]="span">Dislikes: {{quote.downVotes}}</span>
                 </div>
                 <div>
-                    <span><button [style.backgroundColor]="liked ? 'blue' : 'default'"(click)='upVotes(i)'>upvotes</button>{{quote.upVotes}}</span>  <span> <button [style.backgroundColor]="disliked ? 'red' : 'default'" (click)='downVotes(i)'>downvotes</button>{{quote.downVotes}}</span><br> <br>
+                    <span [class]="margin"><button [ngStyle]='liked(i)' (click)='upVotes(i)' >upvotes</button>{{quote.upVotes}}</span>  <span [class]="margin"> <button  (click)='downVotes(i)' [ngStyle]='disliked(i)'>downvotes</button>{{quote.downVotes}}</span><br> <br>
                     <button class="btn btn-primary" (click)='quoteDetails(i)'>QUOTE DETAILS!</button>
                     <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (delete)="quoteDelete($event,i)"></app-quote-details>
                 </div>
