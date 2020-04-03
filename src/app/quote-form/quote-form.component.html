@@ -1,5 +1,6 @@
 
-    <h2 [ngStyle]="formHead">Fill In The Quote!</h2>
+    <div class="container">
+        <h2 [ngStyle]="formHead">Fill In The Quote!</h2>
             <form action="" (ngSubmit)='submitForm()' #ngForm='ngForm' autocomplete="off">
                 <div class="form-group">
                     <label for="date">Please Input Date:</label>
@@ -24,7 +25,7 @@
                 </div>
                 <div class="form-group">
                     <label for="quote">Quote:</label><br>
-                    <textarea name="quote" cols="100" rows="7" placeholder="Quote..." required [(ngModel)]='newQuote.quote' name='quote' #quote='ngModel'></textarea>
+                    <textarea name="quote" cols="40" rows="7" placeholder="Quote..." required [(ngModel)]='newQuote.quote' name='quote' #quote='ngModel'></textarea>
                     <div [hidden]='quote.valid || quote.pristine' class="alert alert-danger">
                         <p>Quote is required!</p>
                     </div>
@@ -34,3 +35,5 @@
                 </div>
             </form>
             <br>
+
+    </div>
