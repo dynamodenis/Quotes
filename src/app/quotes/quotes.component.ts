@@ -9,8 +9,17 @@ import {  Quotes } from '../quotes';
 export class QuotesComponent implements OnInit {
   quotes:Quotes[]=[
     // All the quote objects go here
-    new Quotes(1,new Date(2020,2,4),"Denis Mbugua", "Albert","Live free"),
+    new Quotes(1,new Date(2020,2,4),"Denis Mbugua", "Albert","Live free",0,0),
   ];
+  // This Increaments the upvote on a quote
+upVotes(index){
+  this.quotes[index].upVotes++;
+}
+  // This Increaments the downvote on a quote
+downVotes(index){
+  this.quotes[index].downVotes++;
+}
+
 
   // this toogles between description
   quoteDetails(index){
@@ -42,7 +51,7 @@ export class QuotesComponent implements OnInit {
     
   }
 
-  
+
 
   // This objects are used to style the DOM
   myStyles={

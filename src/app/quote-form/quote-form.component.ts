@@ -19,13 +19,13 @@ export class QuoteFormComponent implements OnInit {
  }
 
  @Input() quote:Quotes;
- newQuote= new Quotes(0,new Date(),'','','');
+ newQuote= new Quotes(0,new Date(),'','','',0,0);
 
  @Output() addQuote= new EventEmitter<any>();
 
  submitForm(){
    this.addQuote.emit(this.newQuote);
-   this.newQuote= new Quotes(0,new Date(),'','','');
+   this.newQuote= new Quotes(0,new Date(),'','','',0,0);
  }
 
   constructor() { }

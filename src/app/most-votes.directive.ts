@@ -1,10 +1,12 @@
-import { Directive } from '@angular/core';
+import { Directive , ElementRef, Input} from '@angular/core';
+import { Quotes } from './quotes';
 
 @Directive({
   selector: '[appMostVotes]'
 })
 export class MostVotesDirective {
-
-  constructor() { }
+  @Input() upvotes:Quotes;
+  @Input() downvotes:Quotes;
+  constructor(elem:ElementRef) { }
 
 }
