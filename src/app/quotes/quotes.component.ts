@@ -12,12 +12,16 @@ export class QuotesComponent implements OnInit {
     new Quotes(1,new Date(2020,2,4),"Denis Mbugua", "Albert","Live free",0,0),
   ];
   // This Increaments the upvote on a quote
+  public liked=false;
 upVotes(index){
   this.quotes[index].upVotes++;
+  this.liked=true;
 }
   // This Increaments the downvote on a quote
+  public disliked=false;
 downVotes(index){
   this.quotes[index].downVotes++;
+  this.disliked=true;
 }
 
 

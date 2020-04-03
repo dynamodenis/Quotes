@@ -13,7 +13,7 @@
                    <span>Likes: {{quote.upVotes}}</span> <span>Dislikes: {{quote.downVotes}}</span>
                 </div>
                 <div>
-                    <span><button (click)='upVotes(i)'>upvotes</button>{{quote.upVotes}}</span>  <span> <button (click)='downVotes(i)'>downvotes</button>{{quote.downVotes}}</span><br>
+                    <span><button [style.backgroundColor]="liked ? 'blue' : 'default'"(click)='upVotes(i)'>upvotes</button>{{quote.upVotes}}</span>  <span> <button [style.backgroundColor]="disliked ? 'red' : 'default'" (click)='downVotes(i)'>downvotes</button>{{quote.downVotes}}</span><br> <br>
                     <button class="btn btn-primary" (click)='quoteDetails(i)'>QUOTE DETAILS!</button>
                     <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (delete)="quoteDelete($event,i)"></app-quote-details>
                 </div>
