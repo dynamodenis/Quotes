@@ -6,4 +6,6 @@
     </ul>
     <button [style.backgroundColor]="liked ? 'blue' : 'default'" [disabled]="isDisabled" (click)=likeVotes()>Upvotes</button>   <span>{{likes}}</span>
     <button [style.backgroundColor]="disliked ? 'blue' : 'default'" [disabled]="isDisabled" (click)='downVotes()'>Downvotes</button> <span>{{dislikes}}</span>
+    <!-- <button [style.backgroundColor]="liked ? 'blue' : 'default'" [disabled]="isDisabled" (click)=Votes()>Upvotes</button>   <span>{{likes}}</span>
+    <button [style.backgroundColor]="disliked ? 'blue' : 'default'" [disabled]="isDisabled" (click)='Votes()'>Downvotes</button> <span>{{dislikes}}</span> -->
 </div>
