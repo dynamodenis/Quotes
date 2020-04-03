@@ -38,3 +38,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Bugs
 
 One the process of running the project and the applicaton is not working as expected you can reach out and send us the complaint [here](https://github.com/dynamodenis/Quotes/issues/new).
+
+## License
+
+This project is licenced by [MIT]()
