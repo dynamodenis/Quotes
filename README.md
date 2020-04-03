@@ -41,4 +41,4 @@ One the process of running the project and the applicaton is not working as expe
 
 ## License
 
-This project is licenced by [MIT]()
+This project is licenced by [MIT](Licence.txt)
