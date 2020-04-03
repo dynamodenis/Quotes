@@ -1,6 +1,8 @@
 # QUOTES
 
-Developer: Denis Mbugua
+Developer: Denis Mbugua.
+
+To run the site click [here](https://quotes-kingdom.netlify.com/)
 
 ## Description
 
